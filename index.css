@@ -1,0 +1,485 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.grayBar {
+  background-color: rgb(54, 56, 55);
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 44px;
+  width: 120%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(245, 245, 247);
+}
+.topMenuBar {
+  position: fixed;
+  top: 0;
+  z-index: 4;
+}
+#applelogo {
+  margin-left: 225px;
+  margin-top: 7px;
+  margin-bottom: 5px;
+}
+#applelogo:hover {
+  cursor: pointer;
+}
+.unorderedlist {
+  margin-top: 13px;
+  margin-left: 43px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(202, 202, 202);
+  font-size: 12px;
+}
+.unorderedlist:hover {
+  color: white;
+  cursor: pointer;
+}
+.unorderedrow {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+#searchlogo {
+  margin-top: 7px;
+  margin-left: 34px;
+}
+#searchlogo:hover {
+  cursor: pointer;
+  color: white;
+}
+.shoppinglogo {
+  margin-top: 8px;
+  margin-left: 24px;
+  height: 20px;
+  width: 20px;
+}
+.shoppinglogo:hover {
+  cursor: pointer;
+  color: white;
+}
+.learnmore {
+  text-align: center;
+}
+.learnmorestuff {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 12.5px;
+  font-size: 13.5px;
+}
+.title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 60px;
+}
+#iphonepro {
+  font-size: 250px;
+  font-weight: 600;
+  z-index: +1;
+}
+#ohsopro {
+  font-size: 25px;
+  font-weight: 400;
+}
+.buttons {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  margin: 19px;
+  font-size: 20px;
+}
+.buttons2 {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  margin: 19px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.a {
+  text-decoration: none;
+  color: rgb(0, 102, 204);
+}
+.a:visited {
+  text-decoration: none;
+  color: rgb(0, 102, 204);
+}
+.a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+.bg-image {
+  height: 100vh;
+  position: relative;
+  /* bottom: 300px; */
+}
+.img1 {
+  background-image: url(https://www.apple.com/v/home/aj/images/heroes/iphone-13-pro/hero_iphone_13pro__dhnsegysa42u_mediumtall_2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition-duration: 0s;
+  transition-delay: 0s;
+  z-index: -1;
+}
+.img2 {
+  background-image: url(https://www.apple.com/v/home/aj/images/heroes/iphone-13/hero_iphone_13__f194u1rdooeq_mediumtall_2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.img3 {
+  background-image: url(https://www.apple.com/v/home/aj/images/heroes/watch-series-7/hero_watch__f05go333pz2i_largetall_2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#firstOfTwoPictures {
+  display: flex;
+}
+.img4 {
+  width: 50%;
+  height: 580px;
+  background-size: auto 100%;
+  background-position: center center;
+  background-image: url(https://www.apple.com/v/home/aj/images/promos/apple-fitness-plus-winter/tile_winter__bpktzwl6hsc2_large_2x.jpg);
+  background-repeat: no-repeat;
+}
+.img5 {
+  width: 50%;
+  height: 580px;
+  background-position: center center;
+  background-size: auto 100%;
+  background-image: url(https://www.apple.com/v/home/aj/images/promos/macbook-pro/tile_macbookpro__cx0ur0qg9biq_large_2x.jpg);
+  background-repeat: no-repeat;
+}
+#secondofTwoPictures {
+  display: flex;
+}
+.img6 {
+  width: 50%;
+  height: 580px;
+  background-position: center center;
+  background-size: auto 100%;
+  background-image: url(https://www.apple.com/v/home/aj/images/promos/valentines-day/promo_vday22__oz9b5x4x7ney_large_2x.jpg);
+  background-repeat: no-repeat;
+}
+.img7 {
+  width: 50%;
+  height: 580px;
+  background-position: center center;
+  background-size: auto 100%;
+  background-image: url(https://www.apple.com/v/home/aj/images/promos/tv-plus-jon-hamm/tile_jon_hamm__dofs2fkb2ueu_large_2x.jpg);
+  background-repeat: no-repeat;
+}
+#thirdofTwoPictures {
+  display: flex;
+}
+.img8 {
+  width: 50%;
+  height: 580px;
+  background-position: center center;
+  background-size: auto 100%;
+  background-image: url(https://www.apple.com/v/home/aj/images/promos/apple-card-january/tile_apple_card__cwonh0wb00om_large_2x.jpg);
+  background-repeat: no-repeat;
+}
+.img9 {
+  width: 50%;
+  height: 580px;
+  background-position: center center;
+  background-size: auto 100%;
+  background-image: url(https://www.apple.com/v/home/aj/images/promos/shot-on-iphone/tile_soip__f0c6lef982em_large_2x.jpg);
+  background-repeat: no-repeat;
+}
+#iphone13 {
+  color: white;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#superpower {
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(254, 194, 235);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#newatch {
+  font-size: 17px;
+  color: rgb(191, 72, 0);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+}
+.watch {
+  width: 188px;
+  height: 72px;
+}
+#introduction {
+  color: rgb(29, 29, 31);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+}
+.hrOne {
+  border: 5px solid white;
+}
+.splitImageDesc {
+  color: rgb(29, 29, 31);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+}
+#fitness {
+  width: 174px;
+  height: 33px;
+  padding-top: 48px;
+  padding-bottom: 16px;
+}
+sup {
+  font-size: 0.6em;
+}
+.superCharged {
+  color: rgb(29, 29, 31);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+}
+#macBookPro {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  margin-top: 53px;
+}
+.pinkTitle {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  margin-top: 53px;
+  color: rgb(96, 45, 98);
+  font-size: 40px;
+}
+.valentine {
+  margin-top: 68px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  color: rgb(96, 45, 98);
+}
+#tv {
+  margin-top: 375px;
+  width: 80px;
+  height: 31px;
+  padding-top: 48px;
+  padding-bottom: 16px;
+}
+.jonhamm {
+  color: rgb(245, 245, 247);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+}
+.buttons3 {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  margin: 19px;
+  font-size: 17px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+.a2 {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.a2:hover {
+  text-decoration: underline;
+}
+#card {
+  width: 110px;
+  height: 33px;
+  padding-top: 48px;
+  padding-bottom: 16px;
+}
+.saveFivePercent {
+  color: rgb(29, 29, 31);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+}
+.onlyAtApple {
+  color: rgb(110, 110, 115);
+  font-weight: 400;
+  font-size: 17px;
+  margin-top: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.shotOnIphone {
+  margin: 52px 191px 0px 191px;
+  font-size: 40px;
+  font-weight: 450;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.macroPhotos {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 4px 221px 0px 221px;
+  font-size: 21px;
+  font-weight: 300;
+}
+.buttons4 {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  margin: 19px;
+  font-size: 17px;
+  font-weight: 300;
+}
+.a3 {
+  text-decoration: none;
+  color: rgb(29, 29, 31);
+  font-weight: 100;
+}
+.a3:hover {
+  text-decoration: underline;
+}
+.footerPart {
+  margin-top: 15px;
+  margin-right: 250px;
+  margin-left: 250px;
+  color: rgb(110, 110, 115);
+  font-size: 12px;
+  line-height: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: left;
+  margin-bottom: 25px;
+}
+#firstBoldPart {
+  color: rgb(110, 110, 115);
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: left;
+}
+.firstLinkPart {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  color: rgb(66, 66, 69);
+  text-decoration: none;
+  font-weight: 600;
+}
+.firstLinkPart:hover {
+  text-decoration: underline;
+}
+
+.specialHr {
+    color: gray;
+}
+.mainDiv {
+    margin-top: 5px;
+    margin-right: 250px;
+    margin-left: 250px;
+    color: rgb(66, 66, 69);
+    font-size: 12px;
+    line-height: 17px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-align: left;
+}
+.listRowColumn {
+    display: flex;
+    flex-direction: row;
+}
+.boldHeadLines {
+    margin-top: 10px;
+    color: rgb(29, 29, 31);
+    font-weight: 500;
+    
+}
+.listUnderline {
+    line-height: 16.0004px;
+    margin-bottom: 9.6px;
+    font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+.listUnderline:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.firstSet {
+    display: flex;
+    flex-direction: column;
+    line-height: 32px;
+    margin-right: 146px;
+}
+.secondSet {
+    display: flex;
+  flex-direction: column;
+  line-height: 32px;
+  margin-right: 100px;
+}
+.thirdSet {
+    display: flex;
+  flex-direction: column;
+  line-height: 32px;
+  margin-right: 70px;
+}
+.fourthSet {
+    display: flex;
+  flex-direction: column;
+  line-height: 32px;
+  margin-right: 80px;
+}
+.fifthSet {
+    display: flex;
+  flex-direction: column;
+  line-height: 32px;
+}
+.finalFooter {
+    margin-top: 20px;
+    color: rgb(110, 110, 115);
+}
+.verticalLine {
+    display: flex;
+}
+.appleRetailer {
+    
+    color: rgb(0, 102, 204);
+    text-decoration: none;
+}
+.appleRetailer:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    box-sizing: content-box;
+}
+.bottomFooter {
+    margin-left: 30px;
+    color: rgb(66, 66, 69);
+    font-weight: 400;
+    margin-right: 10px;
+}
+.US {
+    margin-left: 25px;
+}
