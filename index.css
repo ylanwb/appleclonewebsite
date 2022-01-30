@@ -464,6 +464,7 @@ sup {
 .verticalLine {
     display: flex;
 }
+
 .appleRetailer {
     
     color: rgb(0, 102, 204);
@@ -481,5 +482,6 @@ sup {
     margin-right: 10px;
 }
 .US {
-    margin-left: 25px;
+    margin-left: 45px;
+    color: rgb(66, 66, 69);
 }
