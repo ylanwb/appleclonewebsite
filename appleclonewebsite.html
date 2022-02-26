@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="topMenuBar">
+        <header class="grayBar">
+            <ul class="unorderedrow">
+                <svg id="applelogo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="19" height="25"
+                    viewBox="0 0 172 172" style="fill: #000000">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                        style="mix-blend-mode: normal">
+                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                        <g fill="#ffffff">
+                            <path
+                                d="M115.5625,7.16667c-8.26317,0.48017 -17.74948,5.08363 -23.38965,10.94596c-5.0955,5.332 -9.11578,13.25094 -7.47461,20.91211c8.97983,0.2365 17.99315,-4.48622 23.38965,-10.45605c5.03817,-5.58283 8.85778,-13.37535 7.47461,-21.40202zM116.05241,39.01074c-12.9645,0 -18.38507,7.96452 -27.36491,7.96452c-9.23783,0 -17.68263,-7.46061 -28.86263,-7.46061c-15.20767,0.00717 -38.32487,14.09437 -38.32487,47.2832c0,30.19317 27.35987,63.70215 42.80404,63.70215c9.38117,0.09317 11.65546,-5.89839 24.38346,-5.96289c12.74233,-0.09317 15.49187,6.04172 24.88737,5.96289c10.578,-0.07883 18.83904,-11.70294 24.87337,-20.91211c4.32867,-6.59333 6.10824,-9.95942 9.46224,-17.41276c-24.88983,-6.30667 -29.842,-46.44482 0,-54.74382c-5.633,-9.6105 -22.07558,-18.42057 -31.85808,-18.42057z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+
+                <li class="unorderedlist">Store</li>
+                <li class="unorderedlist">Mac</li>
+                <li class="unorderedlist">iPad</li>
+                <li class="unorderedlist">iPhone</li>
+                <li class="unorderedlist">Watch</li>
+                <li class="unorderedlist">Airpods</li>
+                <li class="unorderedlist">Tv & Home</li>
+                <li class="unorderedlist">Only on Apple</li>
+                <li class="unorderedlist">Accessories</li>
+                <li class="unorderedlist">Support</li>
+
+                <svg id="searchlogo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="19" height="25"
+                    viewBox="0 0 30 30" style="fill: #f0eeeebd">
+                    <path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23
+                            17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0
+                            26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23
+                            7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123
+                            17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z">
+                    </path>
+
+                    <img class="shoppinglogo"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAD/klEQVRogd2ZT28bRRjGf++6WLQ1suWVUgRJpHJAqLeqR7jxBVqkiHsFvfXKd0CqegcJPgACIU5c4CuUXiuhHuwWQbSz2Q1tHCX1vhw86/WfHXud3aRTntMmM/Pu8/iZd2beWfifQJoOqKrtNI7vALeBm8C2bXoGPAJ+6fb7P4vISZPvbVRIYswe8DVwfU3Xp8BXvTD8qal3B00EUdVWasxD4AfgOqp/iOr9luqN49PTzvHpaaelekNU7wOPgQ+AHxNjHqhqqwkOjSA15mFijCbGjA6MuauqTqdVNUiM+SIxZmTHPLhIrk4kxuxZQkeHcfxx1XFxHH+SizmIos/Ok+NaqGo7MeZpYoweGHN30/GJMV8mxmgSRX+qavs8OFYl8rkl8khVN843O80eW0f36nCpm+x3AAS+E5Fs08Eikonq9wCo3q5DpK6QmwACv5+ZgMhvAIjcqkOkrpD3AI6z7NlZA4zG44F9fL8OkbpCOgBbW1svzhpgZmynDpFGNkQfsPKIkhjzErhyQVzW4agXhlddjU5HDg8PQ/wRAXAlTdO+q/GSq2E8Hu9Yu570wvCjsj6JMQrQC8Nah891cRJjngAfZlm2A8RlfZyOqOqOfRy4+lwgBgCtgtMSnEJakA8qXVqTKPq07HlTVIwzBFDYdcVxO5Jlu3ZwuSMi38789c0KrqtRIY7mQiZTqxRuIbayE4cjQHHIE6lz4FsbRwpHNhciIitzRETuMRE5FLi3nq/zPVXiDBY4LcG5amHnY6BaKqTb7//Kil+oKqrEaakOxyKs6lfqiD2S1z5HNYVRlg3t47arXCj9ZxRF7zKZu3Gdc1RTsBwOgLeOouhaWZ9SIe1iLg7L2l8ThgCvHHlSPrVEdgHEkR+vA2q55NwWUS7EJpV65Mi6JdiVOJPOQeCNEKyQYBMhuWrxyRH7o27kCHYPGftxYAQgE8m5VM8RckdE/HHEcqnsiL0o2wKyXq/31/nSq45ut/scyASulV3mLQlJ03QbCAT+bvrqvw5E5EThHyBI03TpxqXMEe+W3hzTJbikwFoSEvhVGS5iAHMcp1h2xBYvPi29OVZtimWr1g5A5qGQKaeSSnHZkfyc5aEQWVG7LwmRfA/x6MCYI+dUVik6p1arKGa8wSXVnNOSkLkLsf39/U671foXOOn2+5fP8s3jPKGqQRrHI6B9Mh6/M1v0zTlyOQimd1m+iYDJhyHgOcDbQbA92zYnZJzPvcJCHzEEyBbyZDFHJrt6EHiX6DmmleJCnswJ8bEOWYQUxd7cEjwnRIpGb4VguckqR3gDHAkKbuuF+FQZLuJVwW1OyNw+khjzAnB+3vIML3thOP2AOnXEfmp7U0QAXJ39FPcfWtm+IS666JUAAAAASUVORK5CYII=" />
+                </svg>
+            </ul>
+        </header>
+    </div>
+
+    <body class="learnmore">
+        <div id="backgroundcolors1">
+            <div class="learnmorestuff">
+                <a class="a" href="https://www.apple.com/us/shop/goto/shop">Shop online</a>
+                <span>and get Specialist help, free delivery, and more. Some of our
+                    stores are offering limited services. Before you visit, please check
+                    your</span>
+                <a class="a" href="https://www.apple.com/retail/">store’s services.</a>
+                <br />
+                <br />
+                <br />
+                <span>Save 5% on Apple products with a new Apple Card through January 31.
+                    Only at Apple. Exclusions and terms apply.1</span>
+                <a class="a" href="https://www.apple.com/apple-card#promotion">Learn more</a>
+            </div>
+        </div>
+    </body>
+
+    <div class="bg-image img1">
+        <div class="title">
+            <h1 id="iphonepro" style="font-size: 54px">iPhone 13 Pro</h1>
+            <p id="ohsopro">Oh. So. Pro.</p>
+            <br />
+        </div>
+        <div>
+            <button class="buttons button1">
+                <a class="a" href="https://www.apple.com/iphone-13-pro/">Learn more ></a>
+            </button>
+            <button class="buttons button2">
+                <a class="a" href="https://www.apple.com/us/shop/goto/buy_iphone/iphone_13_pro">Buy ></a>
+            </button>
+        </div>
+    </div>
+
+    <div class="bg-image img2">
+        <hr class="hrOne" />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h1 id="iphone13" style="font-size: 54px">iPhone 13</h1>
+        <p id="superpower">Your new superpower.</p>
+
+        <button class="buttons button3">
+            <a class="a" href="https://www.apple.com/iphone-13/">Learn more ></a>
+        </button>
+        <button class="buttons button4">
+            <a class="a" href="https://www.apple.com/shop/buy-iphone/iphone-13">Buy ></a>
+        </button>
+    </div>
+
+    <div class="bg-image img3">
+        <hr class="hrOne" />
+        <br />
+        <br />
+        <br />
+        <p id="newatch">New</p>
+        <img src="https://www.apple.com/v/home/aj/images/logos/watch-series-7/watch_logo_lte__sd64ksudvayy_largetall_2x.png"
+            class="watch" />
+        <p id="introduction">Introducing our largest display yet.</p>
+
+        <button class="buttons button3">
+            <a class="a" href="https://www.apple.com/apple-watch-series-7/">Learn more ></a>
+        </button>
+        <button class="buttons button4">
+            <a class="a" href="https://www.apple.com/shop/buy-watch/apple-watch">Buy ></a>
+        </button>
+    </div>
+    <hr class="hrOne" />
+
+    <div id="firstOfTwoPictures">
+        <div class="bg-image img4">
+            <img src="https://www.apple.com/v/home/aj/images/logos/apple-fitness-plus-winter/logo__dcojfwkzna2q_large_2x.png"
+                id="fitness" />
+            <p class="splitImageDesc">More ways to move. Now with</p>
+            <p class="splitImageDesc">Time to Run and Collections.</p>
+
+            <button class="buttons2">
+                <a class="a" href="https://www.apple.com/apple-watch-series-7/">Learn more ></a>
+            </button>
+            <button class="buttons2">
+                <a class="a" href="https://www.apple.com/shop/buy-watch/apple-watch">Try it Free<sup>2</sup>
+                </a>
+            </button>
+        </div>
+        <hr class="hrOne" />
+        <div class="bg-image img5">
+            <h1 id="macBookPro" style="font-size: 40px">MacBook Pro</h1>
+            <p class="superCharged">Supercharged for pros.</p>
+
+            <button class="buttons2">
+                <a class="a" href="https://www.apple.com/iphone-13/">Learn more ></a>
+            </button>
+            <button class="buttons2">
+                <a class="a" href="https://www.apple.com/shop/buy-iphone/iphone-13">Buy ></a>
+            </button>
+        </div>
+    </div>
+    <hr class="hrOne" />
+    <div id="secondofTwoPictures">
+        <div class="bg-image img6">
+            <p class="valentine">Valentine's Day</p>
+            <span class="pinkTitle" style="font-size: 40px">Say it with a</span>
+            <br />
+            <span class="pinkTitle" style="font-size: 40px"> gift from Apple.</span>
+            <br />
+            <button class="buttons2">
+                <a class="a" href="https://www.apple.com/shop/buy-iphone/iphone-13">Shop ></a>
+            </button>
+        </div>
+        <hr class="hrOne" />
+        <div class="bg-image img7">
+            <img src="https://www.apple.com/v/home/aj/images/logos/tv-plus/logo_light__cfvl40z2nzau_large_2x.png"
+                id="tv" />
+            <p class="jonhamm">Everyone but Jon Hamm.</p>
+
+            <button class="buttons3">
+                <a class="a2" href="https://www.apple.com/apple-watch-series-7/">Watch now</a>
+            </button>
+            <button class="buttons3">
+                <a class="a2" href="https://www.apple.com/shop/buy-watch/apple-watch">Try Apple Tv+ free</a>
+            </button>
+        </div>
+    </div>
+    <hr class="hrOne" />
+    <div id="thirdofTwoPictures">
+        <div class="bg-image img8">
+            <img src="https://www.apple.com/v/home/aj/images/logos/apple-card-january/tile_logo_apple_card__ev6ksc3n0p0m_large_2x.png"
+                id="card" />
+            <p class="saveFivePercent">Save 5% on Apple products with a new</p>
+            <p class="saveFivePercent">Apple Card through January 31</p>
+            <p class="onlyAtApple">Only at Apple. Exclusions and terms apply.</p>
+
+            <button class="buttons2">
+                <a class="a" href="https://www.apple.com/apple-card#promotion">Learn more ></a>
+            </button>
+            <button class="buttons2">
+                <a class="a"
+                    href="https://wallet.apple.com/apple-card/setup/feature/ccs?referrer=cid%3Dapy-200-100020">Buy ></a>
+            </button>
+        </div>
+        <hr class="hrOne" />
+        <div class="bg-image img9">
+            <h1 class="shotOnIphone">Shot on iPhone call for entries.</h1>
+            <p class="macroPhotos">Submit your best macro photos by February 16.</p>
+
+            <button class="buttons4">
+                <a class="a3"
+                    href="https://www.apple.com/newsroom/2022/01/share-your-best-iphone-macro-photos-for-apples-shot-on-iphone-challenge/">Learn
+                    more ></a>
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <hr class="hrOne" />
+        <div class="footerOrigin">
+            <div class="footerPartOne">
+                <p id="paragraph1">
+                    <strong id="firstBoldPart">1. The following purchases with Apple Card are ineligible to earn
+                        5% back: monthly financing through Apple Card Monthly Installments,
+                        Apple iPhone Payments, the iPhone Upgrade Program, and wireless
+                        carrier financing plans;</strong>
+                    <a class="firstLinkPart" href="https://www.apple.com/legal/internet-services/itunes/us/terms.html">
+                        Apple Media Services</a>
+                    ; AppleCare+ monthly payments. Subject to credit approval. Valid only
+                    on qualifying purchases in U.S. for new Apple Card customers who open
+                    an account and use it from 12/26/21 to 1/31/22 at Apple Store
+                    locations, apple.com, the Apple Store App, or by calling
+                    1-800-MY-APPLE. Accounts opened before 12/26/21 or after 1/31/22 do
+                    not qualify. New Apple Card users added to an Apple Card Family
+                    account opened during offer period can earn 5% back on their own
+                    purchases. Not valid for existing Apple Card users who merge their
+                    Apple Card accounts to become Co-Owners. 5% is total amount of Daily
+                    Cash that can be earned for qualifying Apple purchases using Apple
+                    Card. Returning qualified items that were purchased during offer
+                    period may impact your cash back. 5% savings is earned as Daily Cash
+                    and transferred to your Apple Cash card when transactions post to your
+                    Apple Card account. If you do not have an Apple Cash card, Daily Cash
+                    can be applied by you as a credit on your statement balance. See the
+                    Apple Card Customer Agreement for more details on Daily Cash and
+                    qualifying transactions. Changes to your account status during offer
+                    period may delay the fulfillment of your Daily Cash bonus.
+                </p>
+                <br />
+                <p>
+                    2. $9.99/month after trial. Offer good for 3 months after eligible
+                    device activation. One subscription per Family Sharing group. Plan
+                    automatically renews until cancelled. Restrictions and other
+                    <a class="firstLinkPart"
+                        href="https://www.apple.com/promo/pdf/EN_US_Fitness_Plus_Promo_TandCs.pdf">terms</a>
+                    apply.
+                </p>
+                <br />
+                <p>A subscription is required for Apple Fitness+</p>
+                <br />
+                <p>
+                    Apple Fitness+ requires iOS 14.3 or later, iPadOS 14.3 or later,
+                    watchOS 7.2 or later, and tvOS 14.3 or later.
+                </p>
+                <br />
+                <p>
+                    To get the newest features, use Apple Fitness+ with Apple Watch Series
+                    3 or later with watchOS 8 paired with iPhone 6s or later with iOS 15
+                    or later; iPad with iPadOS 15 or later; and Apple TV 4K or Apple TV HD
+                    with tvOS 15 or later.
+                </p>
+                <br />
+                <p>
+                    To access and use all the features of Apple Card, you must add Apple
+                    Card to Wallet on an iPhone or iPad with the latest version of iOS or
+                    iPadOS. Update to the latest version by going to Settings > General >
+                    Software Update. Tap Download and Install.
+                </p>
+                <br />
+                <p>Available for qualifying applicants in the United States.</p>
+                <br />
+                <p>
+                    Apple Card is issued by Goldman Sachs Bank USA, Salt Lake City Branch.
+                </p>
+                <br />
+                <p>
+                    Apple TV+ is $4.99/month after free trial. One subscription per Family
+                    Sharing group. Offer good for 3 months after eligible device
+                    activation. Plan automatically renews until cancelled. Restrictions
+                    and other
+                    <a class="firstLinkPart" href="https://www.apple.com/promo/">terms apply.</a>
+                </p>
+            </div>
+        </div>
+        <!-- <hr id="specialHr" /> -->
+        <div class="mainDiv">
+            <div class="listRowColumn">
+                <div class="borderTop">
+                    <div class="firstSet">
+                        <span class="boldHeadLines">Shop and Learn</span>
+                        <span class="listUnderline">Store</span>
+                        <span class="listUnderline">Mac</span>
+                        <span class="listUnderline">iPad</span>
+                        <span class="listUnderline">iPhone</span>
+                        <span class="listUnderline">Watch</span>
+                        <span class="listUnderline">AirPods</span>
+                        <span class="listUnderline">Tv & Home</span>
+                        <span class="listUnderline">iPod touch</span>
+                        <span class="listUnderline">AirTag</span>
+                        <span class="listUnderline">Acessories</span>
+                        <span class="listUnderline">Gift Cards</span>
+                    </div>
+
+                    <div class="secondSet">
+                        <span class="boldHeadLines">Services</span>
+                        <span class="listUnderline">Apple Music</span>
+                        <span class="listUnderline">Apple TV+</span>
+                        <span class="listUnderline">Apple Fitness+</span>
+                        <span class="listUnderline">Apple News+</span>
+                        <span class="listUnderline">Apple Arcade</span>
+                        <span class="listUnderline">iCloud</span>
+                        <span class="listUnderline">Apple One</span>
+                        <span class="listUnderline">Apple Card</span>
+                        <span class="listUnderline">Apple Books</span>
+                        <span class="listUnderline">Apple Podcasts</span>
+                        <span class="listUnderline">App Store</span>
+                        <span class="boldHeadLines">Account</span>
+                        <span class="listUnderline">Manage your Apple ID</span>
+                        <span class="listUnderline">Apple Store Account</span>
+                        <span class="listUnderline">iCloud.com</span>
+                    </div>
+                    <div class="thirdSet">
+
+                        <span class="boldHeadLines">Apple Store</span>
+
+                        <span class="listUnderline">Find a Store</span>
+
+                        <span class="listUnderline">Genius Bar</span>
+
+                        <span class="listUnderline">Today at Apple</span>
+
+                        <span class="listUnderline">Apple Camp</span>
+
+                        <span class="listUnderline">Apple Store App</span>
+
+                        <span class="listUnderline">Refurbished and Clearance</span>
+
+                        <span class="listUnderline">Financing</span>
+
+                        <span class="listUnderline">Apple Trade In</span>
+
+                        <span class="listUnderline">Order Status</span>
+
+                        <span class="listUnderline">Shopping Help</span>
+
+                    </div>
+
+                    <div class="fourthSet">
+
+                        <span class="boldHeadLines">For Business</span>
+
+                        <span class="listUnderline">Apple and Business</span>
+
+                        <span class="listUnderline">Shop for Business</span>
+
+                        <span class="boldHeadLines">For Education</span>
+
+                        <span class="listUnderline">Apple and Education</span>
+
+                        <span class="listUnderline">Shop for K-12</span>
+
+                        <span class="listUnderline">Shop for College</span>
+
+                        <span class="boldHeadLines">For Healthcare</span>
+
+                        <span class="listUnderline">Apple in Healthcare</span>
+
+                        <span class="listUnderline">Health on Apple Watch</span>
+
+                        <span class="listUnderline">Health Records on iPhone</span>
+
+                        <span class="boldHeadLines">For Government</span>
+
+                        <span class="listUnderline">Shop for Government</span>
+
+                        <span class="listUnderline">Shop for Veterans and Military</span>
+
+                    </div>
+
+                    <div class="fifthSet">
+
+                        <span class="boldHeadLines">Apple Values</span>
+
+                        <span class="listUnderline">Accessibility</span>
+
+                        <span class="listUnderline">Education</span>
+
+                        <span class="listUnderline">Environment</span>
+
+                        <span class="listUnderline">Inclusion and Diversity</span>
+
+                        <span class="listUnderline">Privacy</span>
+
+                        <span class="listUnderline">Racial Equity and Justice</span>
+
+                        <span class="listUnderline">Supplier Responsibility</span>
+
+                        <span class="boldHeadLines">About Apple</span>
+
+                        <span class="listUnderline">Newsroom</span>
+
+                        <span class="listUnderline">Apple Leadership</span>
+
+                        <span class="listUnderline">Career Opportunities</span>
+
+                        <span class="listUnderline">Investors</span>
+
+                        <span class="listUnderline">Ethics & Compliance</span>
+
+                        <span class="listUnderline">Events</span>
+
+                        <span class="listUnderline">Contact Apple</span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="finalFooter">
+                <span>More ways to shop:</span>
+
+                <a class="appleRetailer" href="https://www.apple.com/retail/">Find an Apple Store</a>
+                <span>or</span>
+                <a class="appleRetailer" href="https://locate.apple.com/">other retailer</a>
+                <span>near you. Or call 1-800-MY-APPLE</span>
+                <!-- <hr class="specialHr" style="margin-top: 10px; margin-bottom: 10px;"> -->
+                <div class="verticalLine">
+                    <div class="borderTopTwo">
+                        <span>Copyright © 2022 Apple Inc. All rights reserved.</span>
+
+                        <span class="bottomFooter">Privacy Policy</span>
+                        
+                        <span class="bottomFooter">Terms of Use</span>
+                        
+                        <span class="bottomFooter">Sales and Refunds</span>
+                        
+                        <span class="bottomFooter">Legal</span>
+                        
+                        <span class="bottomFooter">Site Map</span>
+                        
+                        <span class="US">United States</span>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+    </footer>
+</body>
+
+</html>
